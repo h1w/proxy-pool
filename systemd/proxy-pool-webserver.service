@@ -1,0 +1,9 @@
+[Unit]
+Description=Web Server
+
+[Service]
+Restart=Always
+ExecStart=/home/bpqvg/Dev/proxy-pool/venv/bin/python3 /home/bpqvg/Dev/proxy-pool/web_server.py
+
+[Install]
+WantedBy=default.target
