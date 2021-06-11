@@ -3,10 +3,7 @@ import asyncio
 from proxybroker import Broker
 
 async def save(proxies, filename):
-    with open(filename, 'w') as f: # Make file empty
-        f.write('')
-        f.close()
-    with open(filename, 'a') as f: # Add proxy with description to file
+    with open(filename, 'w') as f: # Make file empty and start add proxy with description to file
         while True:
             proxy = await proxies.get()
             if proxy is None: # Exit when proxies run out
