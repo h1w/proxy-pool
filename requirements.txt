@@ -8,7 +8,6 @@ chardet==4.0.0
 idna==3.2
 maxminddb==2.0.3
 multidict==5.1.0
-pkg-resources==0.0.0
 proxybroker==0.3.2
 pycares==4.0.0
 pycparser==2.20
