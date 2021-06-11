@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import http.server
 import socketserver
 from http import HTTPStatus
