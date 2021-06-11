@@ -1,0 +1,17 @@
+aiodns==3.0.0
+aiohttp==3.7.4.post0
+async-timeout==3.0.1
+asyncio==3.4.3
+attrs==19.1.0
+cffi==1.14.5
+chardet==4.0.0
+idna==3.2
+maxminddb==2.0.3
+multidict==5.1.0
+pkg-resources==0.0.0
+proxybroker==0.3.2
+pycares==4.0.0
+pycparser==2.20
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+yarl==1.6.3
