@@ -1,0 +1,6 @@
+[Unit]
+Description=Restart proxy-pool-sort.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl --user restart proxy-pool-sort.service
