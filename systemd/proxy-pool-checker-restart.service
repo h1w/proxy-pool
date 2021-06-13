@@ -1,0 +1,6 @@
+[Unit]
+Description=Restart proxy-pool-checker.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl restart proxy-pool-checker.service
