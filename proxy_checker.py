@@ -7,7 +7,7 @@ import urllib3
 async def GetProxies():
     # Get new scanned proxies
     proxy_list = []
-    with open('/home/bpqvg/Dev/proxy-pool/proxies.txt', 'r') as f:
+    with open('proxies.txt', 'r') as f:
         for proxy in f.readlines():
             proxy = proxy.rstrip('\n').split(' ')
             proxy_country = proxy[0]
