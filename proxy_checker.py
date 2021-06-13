@@ -49,7 +49,7 @@ async def main():
         task = asyncio.ensure_future(RequestProxy(host_port, ptype, country))
         tasks.append(task)
     responses = [x for x in await asyncio.gather(*tasks) if x != False]
-    with open('/home/bpqvg/Dev/proxy-pool/proxies_true.txt', 'w') as f:
+    with open('proxies_true.txt', 'w') as f:
         for proxy in responses:
             f.write('{} {} {}\n'.format(proxy[0], proxy[1], proxy[2]))
             f.flush()
