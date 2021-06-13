@@ -12,9 +12,9 @@ _You just need to install python-virtualenv and pip3 requirements_
 
 ## Systemd Services
 ##### _Replace in all services "/home/bpqvg/Dev/" on your path for working directory_
-- systemctl --user daemon-reload (after coppying services to ${HOME}/.config/systemd/user/)
-- systemctl --user enable --now proxy-pool-* (enable all services)
-- #systemctl --user list-timers (you can look at systemd timers)
+- systemctl daemon-reload (after coppying services to ${HOME}/.config/systemd/user/)
+- systemctl enable --now proxy-pool-* (enable all services)
+- #systemctl list-timers (you can look at systemd timers)
 
 ## License 
 ##### _MIT License_
