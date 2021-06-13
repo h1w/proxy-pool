@@ -1,7 +1,0 @@
-[Timer]
-OnActiveSec=5
-OnUnitActiveSec=5
-#Persistent=true
-
-[Install]
-WantedBy=timer.target
