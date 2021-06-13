@@ -19,7 +19,7 @@ wer() else proxy_type.lower()
             proxy_list.append([proxy_addr, proxy_type, proxy_country])
         f.close()
     old_proxy_list = []
-    with open('/home/bpqvg/Dev/proxy-pool/proxies_true.txt', 'r') as f:
+    with open('proxies_true.txt', 'r') as f:
         old_proxy_list = list(map(lambda x: x.rstrip('\n').split(' '), f.readlines()))
         f.close()
     proxy_list.extend(old_proxy_list)
