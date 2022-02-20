@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import requests
 from bs4 import BeautifulSoup
 import threading
@@ -131,5 +132,5 @@ class ProxyScraper:
             # print({"proxy": proxy, "type": proxy_type})
 
 if __name__ == "__main__":
-    proxyScraper = ProxyScraper("https,socks5", "output.txt", False)
+    proxyScraper = ProxyScraper("http,https,socks4,socks5", "output.txt", False)
     proxyScraper.Scrap()

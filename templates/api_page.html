@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Proxy API</title>
+
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='styles/proxy_page.css') }}">
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='styles/api_page.css') }}">
+    
+    <link rel="shortcut icon" href="{{ url_for('static',filename='favicon-icons/favicon.ico') }}">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+            <div class="row justify-content-center">
+                <div id="nav-box">
+                    <a id="pepe-site-name" class="navbar-brand" href="{{ url_for('proxy_page') }}">
+                        <img id="pepe-icon" src="{{ url_for('static',filename='favicon-icons/android-chrome-192x192.png') }}" class="d-inline-block align-top" alt="">
+                        Pepe Proxy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container pt-5 pb-5">
+        <div id="context-container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 pt-3">
+                    <h1 class="text-center">API</h1>
+                    <p>Пример запроса: https://proxy.b-peq.ru/api/v1/json</p>
+                    <p>Результат</p>
+                    <p>{"source":"https://proxy.b-peq.ru","proxy_list":[{"proxy":"103.176.58.19:1080","proxy_country_code":"SG","proxy_type":"socks5"},{"proxy":"20.114.87.37:1080","proxy_country_code":"US","proxy_type":"socks5"},{"proxy":"213.32.62.216:1080","proxy_country_code":"FR","proxy_type":"socks5"},{"proxy":"51.222.13.193:10084","proxy_country_code":"CA","proxy_type":"socks5"},{"proxy":"62.113.115.94:16072","proxy_country_code":"RU","proxy_type":"socks5"},{"proxy":"89.201.4.136:33427","proxy_country_code":"LV","proxy_type":"socks5"},{"proxy":"102.134.17.14:5678","proxy_country_code":"NG","proxy_type":"socks4"},{"proxy":"110.164.156.114:5678","proxy_country_code":"TH","proxy_type":"socks4"},{"proxy":"134.19.254.2:4153","proxy_country_code":"GE","proxy_type":"socks4"},{"proxy":"4.28.96.138:39593","proxy_country_code":"US","proxy_type":"socks4"},{"proxy":"103.176.58.19:1080","proxy_country_code":"SG","proxy_type":"socks4"},{"proxy":"40.83.127.50:8888","proxy_country_code":"HK","proxy_type":"socks4"},{"proxy":"181.143.45.21:4153","proxy_country_code":"CO","proxy_type":"socks4"},{"proxy":"178.48.68.61:4145","proxy_country_code":"HU","proxy_type":"socks4"},{"proxy":"202.69.38.42:5678","proxy_country_code":"PK","proxy_type":"socks4"},{"proxy":"109.125.128.71:5678","proxy_country_code":"IR","proxy_type":"socks4"},{"proxy":"78.140.195.66:3629","proxy_country_code":"RU","proxy_type":"socks4"},{"proxy":"193.162.105.112:5678","proxy_country_code":"TR","proxy_type":"socks4"},{"proxy":"81.16.251.250:5678","proxy_country_code":"GE","proxy_type":"socks4"},{"proxy":"5.180.100.24:5678","proxy_country_code":"UA","proxy_type":"socks4"},{"proxy":"190.145.58.106:5678","proxy_country_code":"CO","proxy_type":"socks4"},{"proxy":"89.133.95.177:4145","proxy_country_code":"HU","proxy_type":"socks4"},{"proxy":"89.228.128.216:5678","proxy_country_code":"PL","proxy_type":"socks4"},{"proxy":"78.38.123.110:4153","proxy_country_code":"IR","proxy_type":"socks4"},{"proxy":"185.27.60.83:53292","proxy_country_code":"HU","proxy_type":"socks4"},{"proxy":"185.47.184.253:45463","proxy_country_code":"HU","proxy_type":"socks4"},{"proxy":"85.105.156.8:4153","proxy_country_code":"TR","proxy_type":"socks4"},{"proxy":"176.106.36.183:1080","proxy_country_code":"PL","proxy_type":"socks4"},{"proxy":"92.247.31.37:4145","proxy_country_code":"BG","proxy_type":"socks4"},{"proxy":"155.133.83.161:58351","proxy_country_code":"PL","proxy_type":"socks4"},{"proxy":"184.105.133.1:48324","proxy_country_code":"US","proxy_type":"socks4"},{"proxy":"89.133.95.177:4145","proxy_country_code":"HU","proxy_type":"socks4"},{"proxy":"81.163.254.104:3629","proxy_country_code":"RU","proxy_type":"socks4"},{"proxy":"188.190.101.143:4145","proxy_country_code":"SK","proxy_type":"socks4"},{"proxy":"152.228.128.48:8118","proxy_country_code":"FR","proxy_type":"https"},{"proxy":"92.42.109.190:1080","proxy_country_code":"FR","proxy_type":"https"},{"proxy":"134.119.206.110:1080","proxy_country_code":"FR","proxy_type":"https"},{"proxy":"134.119.206.108:1080","proxy_country_code":"FR","proxy_type":"https"},{"proxy":"134.119.206.109:1080","proxy_country_code":"FR","proxy_type":"https"}]}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small pt-4 mb-0 pb-0">
+        <div id="footer-container">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Бесплатные прокси</h5>
+
+                        <p>Прокси, которые достаточно быстро умирают и обновляются раз в 1-5 минут. Эти прокси предназначены для одноразовых запросов, например для ботов или для посещения сайтов.</p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Доп информация</h5>
+
+                        <p>1. <a href="{{ url_for('api_page') }}" style="color: azure">API</a></p>
+                        <p>2. <a href="https://t.me/titaniumbee" target="_blank" style="color: azure">Вопросы/Помощь/Предложения</a></p>
+                        <p>3. <a href="https://b-peq.ru" style="color: azure">Автор</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center p-3 pt-0">
+                <!-- © 2020 Copyright: -->
+                ©<script>document.write(new Date().getFullYear())</script> Copyright
+                <a class="text-dark" href="https://b-peq.ru">b-peq</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,6 +1,0 @@
-[Unit]
-Description=Restart proxy-pool-scanner.service
-
-[Service]
-Type=oneshot
-ExecStart=/bin/systemctl --user restart proxy-pool-scanner.service
