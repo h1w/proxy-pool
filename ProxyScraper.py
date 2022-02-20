@@ -1,8 +1,11 @@
-#!/usr/bin/env python3
 import requests
 from bs4 import BeautifulSoup
 import threading
 import json
+import os
+
+output_directory = "/tmp/proxy_pool"
+output_filename = "/tmp/proxy_pool/output.txt"
 
 class ProxyScraper:
     def __init__(self, proxy_type, output_file, verbose):
@@ -13,6 +16,13 @@ class ProxyScraper:
         self.proxy_list = list()
     
     def Scrap(self):
+        # Clear proxy_list
+        self.proxy_list.clear()
+
+        # Create directory in /tmp if not exists
+        if not os.path.exists(output_directory):
+            os.makedirs(output_directory)
+
         threads = []
 
         if "https" in self.proxy_type:
@@ -132,5 +142,5 @@ class ProxyScraper:
             # print({"proxy": proxy, "type": proxy_type})
 
 if __name__ == "__main__":
-    proxyScraper = ProxyScraper("http,https,socks4,socks5", "output.txt", False)
+    proxyScraper = ProxyScraper("http,https,socks4,socks5", output_filename, False)
     proxyScraper.Scrap()

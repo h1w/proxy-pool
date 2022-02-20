@@ -6,8 +6,8 @@ import json
 import random
 import requests
 
-proxy_input_filename = 'output.txt'
-proxy_output_filename = 'proxy_true.txt'
+proxy_input_filename = '/tmp/proxy_pool/output.txt'
+proxy_output_filename = '/tmp/proxy_pool/proxy_true.txt'
 max_proxy_timeout = 5
 test_link = 'https://nnmclub.to'
 
@@ -51,9 +51,13 @@ async def RequestProxy(proxy_addr, proxy_type):
     if response is None:
         return False
     # Check country
-    proxy_addr_without_port = proxy_addr.split(':')[0]
-    jsn = json.loads(requests.get(f'http://ip-api.com/json/{proxy_addr_without_port}', headers=headers).text)
-    country_code = jsn['countryCode']
+    country_code = 'None'
+    try:
+        proxy_addr_without_port = proxy_addr.split(':')[0]
+        jsn = json.loads(requests.get(f'http://ip-api.com/json/{proxy_addr_without_port}', headers=headers).text)
+        country_code = jsn['countryCode']
+    except Exception as e:
+        pass
     return (proxy_addr, proxy_type, country_code)
 
 async def Main():
@@ -70,4 +74,4 @@ async def Main():
             f.flush()
         f.close()
 
-asyncio.run(Main())
+# asyncio.run(Main())
