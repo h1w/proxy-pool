@@ -60,7 +60,8 @@ def ScrapAndCheckProxy():
     while True:
         if first_execute or time.time() - timing > 60.0 * 5:
             # Scrap
-            cmd = f'{WORK_DIR}/venv/bin/python3 {WORK_DIR}/ProxyScraper.py'
+            # cmd = f'{WORK_DIR}/venv/bin/python3 {WORK_DIR}/ProxyScraper.py'
+            cmd = './ProxyScraper.py'
             p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
             out, err = p.communicate()
 
