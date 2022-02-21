@@ -5,7 +5,9 @@ import threading
 import json
 import os
 
-output_filename = "output.txt"
+WORK_DIR = os.getcwd()
+
+output_filename = WORK_DIR+"/output.txt"
 
 class ProxyScraper:
     def __init__(self, proxy_type, output_file, verbose):

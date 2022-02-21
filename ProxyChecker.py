@@ -7,8 +7,10 @@ import random
 import requests
 import os
 
-proxy_input_filename = 'output.txt'
-proxy_output_filename = 'proxy_true.txt'
+WORK_DIR = os.getcwd()
+
+proxy_input_filename = WORK_DIR+'/output.txt'
+proxy_output_filename = WORK_DIR+'/proxy_true.txt'
 max_proxy_timeout = 5
 test_link = 'https://nnmclub.to'
 

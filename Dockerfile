@@ -1,14 +1,10 @@
-FROM ubuntu:latest
-MAINTAINER h1w 'bpqvgq@gmail.com'
+FROM python:3.9
 
-WORKDIR /code
+WORKDIR /app
 
-RUN apt-get update -y
-RUN apt-get install -y git python3 python3-pip python3-dev build-essential
+COPY . /app
 
-RUN git clone https://github.com/h1w/proxy-pool
-
-WORKDIR /code/proxy-pool
+RUN chmod +x ProxyScraper.py
 
 RUN pip3 install -r requirements.txt
 

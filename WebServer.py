@@ -7,10 +7,10 @@ import os
 import ProxyChecker
 import asyncio
 
-proxy_filename = 'proxy_true.txt'
-proxy_scraper_output_filename = "output.txt"
-
 WORK_DIR = os.getcwd()
+
+proxy_filename = WORK_DIR+'/proxy_true.txt'
+proxy_scraper_output_filename = WORK_DIR+"/output.txt"
 
 app = Flask(__name__)
 
@@ -61,7 +61,7 @@ def ScrapAndCheckProxy():
         if first_execute or time.time() - timing > 60.0 * 5:
             # Scrap
             # cmd = f'{WORK_DIR}/venv/bin/python3 {WORK_DIR}/ProxyScraper.py'
-            cmd = './ProxyScraper.py'
+            cmd = WORK_DIR+'/ProxyScraper.py'
             p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
             out, err = p.communicate()
 
@@ -77,4 +77,4 @@ thread = threading.Thread(target=ScrapAndCheckProxy, args=())
 thread.daemon = True
 thread.start()
 
-app.run(debug=False, host='0.0.0.0', port=8085)
+app.run(debug=False, host='0.0.0.0', port=5000)
