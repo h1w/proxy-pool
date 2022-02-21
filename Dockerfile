@@ -12,7 +12,7 @@ WORKDIR /code/proxy-pool
 
 RUN pip3 install -r requirements.txt
 
-RUN mkdir /tmp/proxy-pool
+RUN mkdir /tmp/proxy_pool
 
 ENTRYPOINT [ "python3" ]
 
