@@ -76,4 +76,4 @@ thread = threading.Thread(target=ScrapAndCheckProxy, args=())
 thread.daemon = True
 thread.start()
 
-app.run(host='0.0.0.0', port=8085)
+app.run(debug=False, host='0.0.0.0', port=8085)
