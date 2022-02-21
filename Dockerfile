@@ -12,4 +12,8 @@ WORKDIR /code/proxy-pool
 
 RUN pip3 install -r requirements.txt
 
-CMD [ "python3", "./WebServer.py" ]
+RUN mkdir /tmp/proxy-pool
+
+ENTRYPOINT [ "python3" ]
+
+CMD [ "WebServer.py" ]
