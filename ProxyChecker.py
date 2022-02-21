@@ -5,9 +5,10 @@ import aiohttp_proxy
 import json
 import random
 import requests
+import os
 
-proxy_input_filename = '/tmp/proxy_pool/output.txt'
-proxy_output_filename = '/tmp/proxy_pool/proxy_true.txt'
+proxy_input_filename = 'output.txt'
+proxy_output_filename = 'proxy_true.txt'
 max_proxy_timeout = 5
 test_link = 'https://nnmclub.to'
 

@@ -4,8 +4,7 @@ import threading
 import json
 import os
 
-output_directory = "/tmp/proxy_pool"
-output_filename = "/tmp/proxy_pool/output.txt"
+output_filename = "output.txt"
 
 class ProxyScraper:
     def __init__(self, proxy_type, output_file, verbose):
@@ -18,10 +17,6 @@ class ProxyScraper:
     def Scrap(self):
         # Clear proxy_list
         self.proxy_list.clear()
-
-        # Create directory in /tmp if not exists
-        if not os.path.exists(output_directory):
-            os.makedirs(output_directory)
 
         threads = []
 

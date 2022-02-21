@@ -7,12 +7,8 @@ import os
 import ProxyChecker
 import asyncio
 
-proxy_filename = '/tmp/proxy_pool/proxy_true.txt'
-proxy_scraper_output_filename = "/tmp/proxy_pool/output.txt"
-
-# Create directory in /tmp if not exists
-if not os.path.exists('/tmp/proxy_pool'):
-    os.makedirs('/tmp/proxy_pool')
+proxy_filename = 'proxy_true.txt'
+proxy_scraper_output_filename = "output.txt"
 
 WORK_DIR = os.getcwd()
 
