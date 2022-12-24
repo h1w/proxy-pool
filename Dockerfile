@@ -1,13 +1,13 @@
-FROM python:3.9
+FROM python:3.10
 
 WORKDIR /app
 
 COPY . /app
 
-RUN chmod +x ProxyScraper.py
+RUN chmod +x scrap_proxies.py
 
 RUN pip3 install -r requirements.txt
 
 ENTRYPOINT [ "python3" ]
 
-CMD [ "WebServer.py" ]
+CMD [ "web_server.py" ]
